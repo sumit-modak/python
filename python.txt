@@ -1,0 +1,259 @@
+read&write
+    print()                                 # prints line in the end
+    print(statement, end="")                # prints space in the end
+    input(statement)                        # inputs data from user printing the statement
+    input()                                 # inputs data from user
+
+x, y = val1, val2                           # assigning val1 to x and val2 to y
+x = y = val                                 # assigning val to x and y
+type(var)                                   # determining_data_type
+
+local > enclosing > global > built_in       # variable_scope_priority
+
+=============================================================== bool
+var = True                                  # boolean declaration
+var = False                                 # boolean declaration
+
+logical_operators
+    negation : not 
+    disjunction : or
+    conjunction : and 
+
+=============================================================== int, float
+var = number                                # integer assignment
+var = number.number                         # float assignment    
+int(var)                                    # integer type casting
+float(var)                                  # float type casting
+
+math_functions
+    abs(float)                              # absolute_value
+    round(float)                            # round_off
+    math.ceil(float)                        # ceiling_value
+    math.floor(float)                       # floor_value
+    pow(base, exp)                          # power_function
+    math.sqrt(var)                          # square_root
+    max(var1, var2, var3)                   # maximum_value
+    min(var1, var2, var3)                   # minimum_value
+
+=============================================================== string 
+var = "string"                              # assignment
+str(var)                                    # type casting
+
+string_operations 
+    var1 + var2                             # string_concatenation
+    var * n                                 # append_n_times
+
+string_functions
+    len(var)                                # length_of_string
+    var.find(char)                          # find_first_char
+    var.capitalize()                        # capitalize_first_letter
+    var.upper()                             # to_upper_case
+    var.lower()                             # to_lower_case
+    var.isdigit()                           # checks_for_all_chars_as_digits
+    var.isalpha()                           # checks_for_all_chars_as_alphabets
+    var.count(char)                         # char_count
+    var.replace(string, string)             # replace_character
+    var.title()                             # replace_first_char_of_every_word
+    var.split(string)                       # breaks down the whole string into tokens
+
+string_slicing 
+    var[start:stop:step]
+    var[slice(start, stop, step)]
+
+string_formating
+    " {} {} ... {} ".format(v1, v2, ... , vn)
+    " {0} {1} ... {n-1} ".format("", "", ... , "")
+    " {v1} {v2} ... {vn} ".format(v1, v2, ... , vn)
+    " {:padding} ".format(var)
+    " {:<padding} ".format(var)             # left align
+    " {:>padding} ".format(var)             # right align
+    " {:^padding} ".format(var)             # center align
+    " {:.nf} ".format(number)               # n is const
+    " {:,} ".format(number)                 # adds comma in between number
+    " {:b} ".format(number)                 # replace to binary 
+    " {:o} ".format(number)                 # replace to octal
+    " {:x} ".format(number)                 # replace to lower case hexadecimal
+    " {:X} ".format(number)                 # replace to upper case hexadecimal
+    " {:e} ".format(number)                 # replace to scientific notation (or :E)
+
+===============================================================
+conditions
+    if <condition>:
+        statement1
+    elif <condition>:
+        statement2
+    else:
+        statement3
+
+loops
+    while <condition>:
+        statement
+
+    for i in range(start, end, step):
+        statement
+
+    for ch in string:
+        statement
+
+    for it in iterable:
+        statement
+
+control_statements
+    break                                   # breaks from the loop block
+    continue                                # skips the current iteration
+    pass                                    # alternate keyword of an empty block of statement
+
+exception_handling
+    try:
+        statement
+    expect Exception as e:
+        print(e)
+    else:
+        statement
+    finally:
+        statement
+
+=============================================================== tuple (immutable, indexed, ordered)
+t = (val1, val2, val3)                      # tuple_assignment
+t[i]                                        # ith_indexed_element
+tuple(some_iterable)                        # type_casting
+
+tuple_functions
+    t.count(val)                            # find_count
+    t.index(val)                            # get_index
+
+=============================================================== list [mutable, indexed, ordered]
+l = [val1, val2, ... , valn]                # list_assignment
+l[i]                                        # ith_indexed_element
+l[i] = val                                  # replace_ith_element
+list(some_iterable)                         # type_casting
+l2 = [list1, list2, ... , listn]            # double_dimentional_list_assignment
+
+list_functions
+    print(l)                                # print_whole_list
+    l.append(val)                           # appends_an_element
+    l.pop()                                 # removes_last_element
+    l.remove(val)                           # remove_an_element
+    l.insert(index, val)                    # insert_at_ith_position
+    l.reverse()                             # reverses_the_list
+    l.extend(some_list)                     # appends_all_the_elements_of_some_list
+    l.sort()                                # sort_list
+    l.clear()                               # reset_list
+
+list_comprehensions
+    l = [expression for i in range(l, r)]   # create a list using expression with all i between l and r
+
+=============================================================== set {mutable, unordered, unindexed and no_duplicates}
+s = {val1, val2, ... , valn}                # set_assignment
+set(some_iterable)                          # type_casting
+
+set_functions
+    s.add(val)                              # add_element
+    s.remove(val)                           # removes_given_element
+    s.discard(val)                          # removes_given_element_and_gives_no_error_if_not_present
+    s.clear()                               # reset_set
+    s.update(other_set)                     # append_another_set
+    s.union(other_set)                      # create_new_bigger_set
+    s.difference(other_set)                 # find_difference_between_two_sets
+    s.intersection(other_set)               # find_common_elements
+
+=============================================================== dictionary {mutable, unordered, no_duplicates and use hashing}
+d = {k1 : v1, k2 : v2, ... , kn : vn}       # dictionary_assignment
+d[key]                                      # get_value
+
+dictionary_functions
+    d.get(key)                              # gets value and if not present returns none
+    d.keys()                                # get_list_of_all_keys
+    d.values()                              # get_list_of_all_values
+    d.items()                               # get_tuple_list_of_all_key&values
+    d.update({key : value})                 # append_a_key_value_pair
+    d.pop(key)                              # removes_given_key
+    d.clear()                               # reset_dictionary
+
+dictionary_comprehensions
+    d = {key: <expression> for i in range(l, r)}
+
+====================================================================================== functions
+def function_name():                        # defining a function
+    statement
+    return val
+
+keyword_arguments:
+    def function_name(var1, var2, var3):
+        statement
+    
+    function_name(var3=val3, var2=val2, var1=val1)
+
+args:                                       # templates the whole arguments section as tuple 
+    def function_name(*args):
+        for i in args:
+            statement
+        return val
+
+kwargs:                                     # template that pack the whole arguments as dictionary
+    def function_name(**kwargs):
+        for i in kwargs.items():
+            statement
+        return val
+
+function_reference:
+    def fn():
+        block_of_statement
+    
+    var = fn
+    var()                                   # var can be used to call the function
+
+higher_order_function:
+    passing a function reference as another function argument
+    returning a function in return
+
+lambda_function
+    function_name = lambda parameter: return_statement
+
+sort()
+map(function_reference, iterable)
+filter(function_reference, iterable)
+functools.reduce(function_reference, iterable)
+zip()
+
+=============================================================== inbuilt_python_libraries
+
+random_number_generation                    (import random)
+    random.randint(l, r)                    # generates random integer between l and r
+    random.random()                         # generates random between 0 and 1
+    random.choice(list)                     # makes a random choice 
+    random.shuffle(list)                    # shuffles the whole list
+
+file_manipulation                           (import os)
+    os.path.exists(path)                    # detects a location whose path is passed
+    os.path.isfile(path)                    # detects the passed path is file or not
+    os.path.isdir(path)                     # detects the passed path is directory or not
+    with open(path) as file:                # assigns the passed path as file 
+    with open(path, 'w') as file            # assigns the passed path as file and opens the file in write mode
+    with open(path, 'a') as file            # assigns the passed path as file and opens the file in append mode
+    file.read()                             # gets the contents of the file 
+    file.closed                             # closes a file
+    os.replace(src_path, dst_path)          # moves a file from source path to destination path
+    os.remove(path)                         # removes a file from the given path
+    os.rmdir(path)                          # removes a directory from the given path
+    
+                                            (import shutil)
+    shutil.copyfile(src_path, dst_path)     # copies contents of a file 
+    shutil.copy(src_path, dst_path)         # copies contents of a file with permissions and also path could be a directory
+    shutil.copy2(src_path, dst_path)        # same as copy() and copies metadata (file's creation and modification time)
+    shutil.rmtree(path)                     # removes a folder recursively from the given path 
+
+-----------------------------------------------------------------------------------------
+walrus_operator
+    print(var := val)       # assigns var = val and also prints the value in console
+
+time.sleep(seconds)
+help("modules")
+
+commands:
+    python3 -m venv                                 # creates virtual environment
+    source venv/bin/activate                        # activates virtual environment
+    deactivate                                      # deactivates virtual environment
+    python3 -m venv venv --system-site-packages     # creates venv with all globally installed packages
+    pip list --local                                # shows only locally installed packages 
+    

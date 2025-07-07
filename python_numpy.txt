@@ -1,0 +1,36 @@
+import numpy as np
+
+a = np.array([data])                    # creating array 
+a = np.array([data], dtype=)
+
+a.ndim                                  # gets number of dimentions
+a.shape                                 # gets all the dimentions
+a.dtype                                 # gets datatype
+a.itemsize                              # gets size of array datatype
+a.size                                  # 
+a.nbytes                                # gets total size of the array in bytes
+a[row, col]                             # gets element
+a[row, :]                               # gets specific row
+a[:, col]                               # gets specific column
+a[start:end:step, start:end:step]       # array slicing
+a[sliced_array] = list                  # assign sliced elements with list elements
+b = a                                   # b is reference to the array a 
+b = a.copy()                            # creates a copy of a in b 
+a += val                                # adds val to every element of array a 
+a + b                                   # adds a and b if they are of same order 
+np.fn(a)                                # creates an array with given function of same order 
+
+np.zeroes((n_row, n_col))               # creates an array with all zeroes
+np.ones((n_row, n_col))                 # creates an array with all ones 
+np.full((n_row, n_col), num)            # creates an array with specified number
+np.full(a.shape, num)
+np.full_like(a.shape, num)
+np.identity(rank)                       # creates identity matrix of given rank
+np.repeat(array_name, n, axis=)         # repeats the given array for n times on the given axis
+
+np.random.rand(n_row, n_col)                        # creates an array with random numbers
+np.random.randint(start, end, size=(n_row, n_col))  # creates an array with random integers within given range
+np.random.random_sample(a.shape)                    # creates an array with given shape and random numbers
+
+np.matmul(a, b)                         # multiplies matrix a with b 
+np.linalg.det(a)                        # computes determinant of a 
